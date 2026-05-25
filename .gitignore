@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+*.pyc
+nodo_civico.db
+.idea/

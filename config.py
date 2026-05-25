@@ -1,0 +1,9 @@
+import os
+
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
+class Config:
+    DATABASE_URI = f"sqlite:///{os.path.join(BASE_DIR, 'nodo_civico.db')}"
+    DEBUG = True
+    HOST = '0.0.0.0'
+    PORT = 5000
