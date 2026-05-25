@@ -21,9 +21,11 @@ def create_app():
     app.register_blueprint(categories_bp)
     app.register_blueprint(users_bp)
 
-    # Crear tablas si no existen
+    # Crear tablas y poblar datos iniciales
     with app.app_context():
         db.create_all()
+        from seed import seed_database
+        seed_database()
 
     return app
 
